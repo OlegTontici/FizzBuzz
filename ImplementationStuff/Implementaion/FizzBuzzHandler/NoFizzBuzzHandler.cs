@@ -11,7 +11,7 @@ namespace ImplementationStuff.Implementaion.FizzBuzzHandler
         {
             numberToDivide = number;
 
-            return numberToDivide % 3 != 0 && numberToDivide % 5 != 0;
+            return !CanFizz() && !CanBuzz();
         }
 
         public override void Print()

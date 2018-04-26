@@ -12,7 +12,7 @@ namespace ImplementationStuff.Implementaion.FizzBuzzHandler
         {
             numberToDivide = number;
 
-            return numberToDivide % 3 == 0;
+            return CanFizz();
         }
 
         public override void Print()

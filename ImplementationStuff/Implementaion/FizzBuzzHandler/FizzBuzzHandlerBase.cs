@@ -14,8 +14,8 @@ namespace ImplementationStuff.Implementaion.FizzBuzzHandler
             this.printingService = printingService;
         }
 
-        public abstract bool CanHandle(int number);
         public abstract void Print();
+        public abstract bool CanHandle(int number);
         public void Handle(int numberToHandle)
         {
             if (CanHandle(numberToHandle))
@@ -29,6 +29,16 @@ namespace ImplementationStuff.Implementaion.FizzBuzzHandler
                     nextHandler.Handle(numberToHandle);
                 }
             }
+        }
+
+        protected bool CanFizz()
+        {
+            return numberToDivide % 3 == 0;
+        }
+
+        protected bool CanBuzz()
+        {
+            return numberToDivide % 5 == 0;
         }
     }
 }
