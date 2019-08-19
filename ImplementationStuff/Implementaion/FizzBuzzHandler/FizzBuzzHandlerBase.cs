@@ -6,7 +6,6 @@ namespace ImplementationStuff.Implementaion.FizzBuzzHandler
     {
         private IFizzBuzzHandler nextHandler;
         protected IPrintingService printingService;
-        protected int numberToDivide = 0;
 
         public FizzBuzzHandlerBase(IFizzBuzzHandler nextHandler, IPrintingService printingService)
         {
@@ -31,14 +30,14 @@ namespace ImplementationStuff.Implementaion.FizzBuzzHandler
             }
         }
 
-        protected bool CanFizz()
+        protected bool CanFizz(int number)
         {
-            return numberToDivide % 3 == 0;
+            return number % 3 == 0;
         }
 
-        protected bool CanBuzz()
+        protected bool CanBuzz(int number)
         {
-            return numberToDivide % 5 == 0;
+            return number % 5 == 0;
         }
     }
 }

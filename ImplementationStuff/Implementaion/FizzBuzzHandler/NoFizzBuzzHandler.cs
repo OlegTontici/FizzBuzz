@@ -4,19 +4,21 @@ namespace ImplementationStuff.Implementaion.FizzBuzzHandler
 {
     public class NoFizzBuzzHandler : FizzBuzzHandlerBase
     {
+        private int fizzBuzzNumber;
+
         public NoFizzBuzzHandler(IFizzBuzzHandler nextHandler, IPrintingService printingService) : base(nextHandler, printingService)
         {
         }
+
         public override bool CanHandle(int number)
         {
-            numberToDivide = number;
-
-            return !CanFizz() && !CanBuzz();
+            fizzBuzzNumber = number;
+            return !CanFizz(number) && !CanBuzz(number);
         }
 
         public override void Print()
         {
-            printingService.Print(numberToDivide.ToString());
+            printingService.Print(fizzBuzzNumber.ToString());
         }
     }
 }

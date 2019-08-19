@@ -10,9 +10,7 @@ namespace ImplementationStuff.Implementaion.FizzBuzzHandler
 
         public override bool CanHandle(int number)
         {
-            numberToDivide = number;
-
-            return CanBuzz();
+            return CanBuzz(number);
         }
 
         public override void Print()
